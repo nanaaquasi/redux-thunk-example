@@ -76,7 +76,7 @@ const fetchTodos = () => {
       .get('https://jsonplaceholder.typicode.com/todos')
       .then((response) => {
         const todos = response.data.map((todo) => todo.title);
-        dispatch(fetchTodosSuccess(todos.splice(0, 3)));
+        dispatch(fetchTodosSuccess(todos.splice(0, 5)));
       })
       .catch((error) => {
         dispatch(fetchTodosFailure(error.message));
